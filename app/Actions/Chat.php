@@ -85,7 +85,7 @@ class Chat
         
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
-            'Authorization' => 'Bearer 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',
+            'Authorization' => 'Bearer '.env('OPENAI_API_KEY'),
         ])->post('https://api.openai.com/v1/chat/completions', [
             'model' => 'gpt-3.5-turbo',
             'messages' => [
